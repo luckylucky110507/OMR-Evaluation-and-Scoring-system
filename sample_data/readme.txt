@@ -1,1 +1,0 @@
-Sample OMR dataset files are not included as images here, but you can use your own scanned OMR sheet images.\n\nUse the following answer key structure for testing:\n- sample_data/answer_key_v1.json\n\nTo test, upload your OMR sheet image through the app and verify that it lands in uploads/.
