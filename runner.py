@@ -80,7 +80,7 @@ def run_frontend():
     try:
         subprocess.run([
             sys.executable, "-m", "streamlit", "run", 
-            "app/main.py",
+            "app.py",
             "--server.port", "8501",
             "--server.address", "0.0.0.0"
         ])
@@ -125,9 +125,8 @@ def show_status():
     
     # Check if key files exist
     key_files = [
-        "app/main.py",
+        "app.py",
         "backend/main.py", 
-        "omr/pipeline.py",
         "requirements.txt",
         "answer_keys.json"
     ]

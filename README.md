@@ -1,14 +1,15 @@
 ﻿# 📊 OMR Evaluation System
 
-A lightweight OMR (Optical Mark Recognition) evaluation project with a Streamlit frontend and command-line runner support.
+A lightweight OMR (Optical Mark Recognition) evaluation project with a Streamlit frontend and command-line helper scripts.
 
 ## 🌟 What’s Included
 
 - `app.py` — Streamlit user interface for OMR processing and reporting
-- `config.py` — runtime settings, environment overrides, and directory creation helper
+- `config.py` — runtime settings, environment overrides, and directory helpers
 - `run.py` — entry point for starting the backend, frontend, or both
+- `runner.py` — install, test, and status helper script
 - `requirements.txt` — runtime dependencies
-- `sample_data/` — demo images and answer key samples
+- `sample_answer_key.csv` — demo answer key data
 
 ## 🚀 Quick Start
 
@@ -16,14 +17,9 @@ A lightweight OMR (Optical Mark Recognition) evaluation project with a Streamlit
 - Python 3.8 or higher
 - `pip` available
 
-### Install dependencies
+### Install dependencies and create folders
 ```bash
-pip install -r requirements.txt
-```
-
-### Create required directories
-```bash
-python run.py api
+python runner.py install
 ```
 
 ### Run the frontend only
@@ -41,6 +37,14 @@ python run.py api
 python run.py both
 ```
 
+### Optional runner commands
+```bash
+python runner.py frontend
+python runner.py backend
+python runner.py both
+python runner.py status
+```
+
 ## 🧩 Project Layout
 
 ```
@@ -54,6 +58,9 @@ python run.py both
 ├── setup.py
 ├── README.md
 ├── LICENSE
+├── sample_answer_key.csv
+├── sample_answer_key.json
+├── sample_answer_key.xlsx
 ├── simple_test.py
 ├── test_excel_processing.py
 ├── test_omr_system.py
